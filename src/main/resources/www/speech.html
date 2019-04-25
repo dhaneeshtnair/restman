@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<style>
+html, body {
+	height: 100%;
+}
+
+#iguana {
+	width: 100%;
+	height: 100%;
+	background: url(img/image_avatar.png) center center no-repeat;
+}
+
+#iguana.open {
+	background-image: url(img/image_avatar.png);
+}
+
+#iguana.open2 {
+	background-image: url(img/image_avatar.png);
+}
+
+
+
+@media only screen and (max-width: 1023px) {
+	/* smaller tablet portrait */
+	#iguana {
+		background-size: 512px, 384px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	/* mobile */
+	#iguana {
+		background-size: 256px, 192px;
+	}
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.blink {
+    -webkit-animation: blink 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 1s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 1s;
+    -o-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes swinging{
+    0%{-webkit-transform: rotate(10deg);}
+    50%{-webkit-transform: rotate(-5deg)}
+    100%{-webkit-transform: rotate(10deg);}
+}
+ 
+@keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+}
+ 
+.swingimage{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
+}
+
+</style>
+</head>
+
+
+<body>
+	<img class="swingimage" src="img/image_avatar.png"/>
+	<div id="iguana" class="iguana">
+		<img class="blink" src="img/mask.png" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+{	
+	"name" : "Test Input 1",
+	"id" : "input1",
+	"tags": ["smoke","read"],
+	"description": "Sample Test Case",
+	"steps": [{
+		"name" : "Test Input 1",
+		"id" : "input1",
+		"stepIndex":"1",
+		"tags": ["smoke","read"],
+		"onSuccess": "stepIndex2",
+		"onFailure": "stepIndex3",
+		"description": "Sample Test Case",
+		"url" : "http://cms-dev.in.here.com/v1/transportAccessRestriction/3317691592?userName=1cmstst",
+	    "contentType":"application/json",
+		"method" : "PUT",
+		"assertions" :[
+						{    
+							"name" : "Check Response Code",
+							"message" : "Response Code {{responseCode}}",
+							"expect" : "responseCode==200"
+						},
+						{
+							"name" : "Check Execution Status",
+							"message" : "Execution Status {{response['execution']['status']}}",
+							"expect" : "response['execution']['status']=='succeeded'"
+						}
+					],
+		"input" :	{
+						"transportAccessRestriction": {
+							"properties": {
+								"dataSource": 27049915,
+								"accessibility": [
+								"Autos",
+								"Buses",
+								"Carpools",
+								"Emergency Vehicles",
+								"Motorcycle",
+								"Taxis",
+								"Through Traffic",
+								"Trucks"
+								],
+								"restrictionType": "Weight",
+								"restrictionValue": 3500000,
+								"directionClosureType": "Closed In Both Directions",
+								"endOfLink": "Whole Link",
+								"dayOfWeekModifiers": [],
+								"externalModifiers": [],
+								"dateRangesModifiers": [],
+								"dayOfWeekOfMonthModifiers": [],
+								"dayOfMonthModifiers": [],
+								"dayOfWeekOfYearModifiers": [],
+								"monthOfYearModifiers": [],
+								"dayOfMonthOfYearModifiers": [],
+								"weekOfMonthModifiers": []
+							},
+						"id": 3317691592
+						}
+					}
+	},{
+		"name" : "Test Input 1",
+		"id" : "input2",
+		"stepIndex":"2",
+		"tags": ["smoke","read"],
+		"onSuccess": "end",
+		"onFailure": "stepIndex3",
+		"description": "Sample Test Case",
+		"url" : "http://cms-dev.in.here.com/v1/transportAccessRestriction/3317691592?userName=1cmstst",
+		"method" : "PUT",
+		"assertions" :[
+						{    
+							"name" : "Check Response Code",
+							"message" : "Response Code {{responseCode}}",
+							"expect" : "responseCode==200"
+						},
+						{
+							"name" : "Check Execution Status",
+							"message" : "Execution Status {{response['execution']['status']}}",
+							"expect" : "response['execution']['status']=='succeeded'"
+						}
+					],
+		"input" :	{
+						"transportAccessRestriction": {
+							"properties": {
+								"dataSource": 27049915,
+								"accessibility": [
+								"Autos",
+								"Buses",
+								"Carpools",
+								"Emergency Vehicles",
+								"Motorcycle",
+								"Taxis",
+								"Through Traffic",
+								"Trucks"
+								],
+								"restrictionType": "Weight",
+								"restrictionValue": 3500000,
+								"directionClosureType": "Closed In Both Directions",
+								"endOfLink": "Whole Link",
+								"dayOfWeekModifiers": [],
+								"externalModifiers": [],
+								"dateRangesModifiers": [],
+								"dayOfWeekOfMonthModifiers": [],
+								"dayOfMonthModifiers": [],
+								"dayOfWeekOfYearModifiers": [],
+								"monthOfYearModifiers": [],
+								"dayOfMonthOfYearModifiers": [],
+								"weekOfMonthModifiers": []
+							},
+						"id": 3317691592
+						}
+					}
+	},{
+		"name" : "Test Input 1",
+		"id" : "input3",
+		"tags": ["smoke","read"],
+		"stepIndex":"3",
+		"onSuccess": "end",
+		"onFailure": "end",
+		"description": "Sample Test Case",
+		"url" : "http://cms-dev.in.here.com/v1/transportAccessRestriction/3317691592?userName=1cmstst",
+		"method" : "PUT",
+		"assertions" :[
+						{    
+							"name" : "Check Response Code",
+							"message" : "Response Code {{responseCode}}",
+							"expect" : "responseCode==201"
+						},
+						{
+							"name" : "Check Execution Status",
+							"message" : "Execution Status {{response['execution']['status']}}",
+							"expect" : "response['execution']['status']=='succeeded'"
+						}
+					],
+		"input" :	{
+						"transportAccessRestriction": {
+							"properties": {
+								"dataSource": 27049915,
+								"accessibility": [
+								"Autos",
+								"Buses",
+								"Carpools",
+								"Emergency Vehicles",
+								"Motorcycle",
+								"Taxis",
+								"Through Traffic",
+								"Trucks"
+								],
+								"restrictionType": "Weight",
+								"restrictionValue": 3500000,
+								"directionClosureType": "Closed In Both Directions",
+								"endOfLink": "Whole Link",
+								"dayOfWeekModifiers": [],
+								"externalModifiers": [],
+								"dateRangesModifiers": [],
+								"dayOfWeekOfMonthModifiers": [],
+								"dayOfMonthModifiers": [],
+								"dayOfWeekOfYearModifiers": [],
+								"monthOfYearModifiers": [],
+								"dayOfMonthOfYearModifiers": [],
+								"weekOfMonthModifiers": []
+							},
+						"id": 3317691592
+						}
+					}
+	}]
+}

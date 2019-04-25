@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+         var bodyObject={
+
+"meta": {
+"name": "Project 1",
+"description": "Maiores dolores inventore repudiandae debitis in rerum veritatis dolor.",
+"thumbnail_url": "http://via.placeholder.com/540x360?text=This%20is%20a%20map"
+},
+"status": "PUBLISHED",
+"layers": [
+{
+"id": "layer-1000001_1",
+"meta": {
+"title": "Layer 1 - Project 1000001"
+},
+"visible": true,
+"styleGroup": {
+"linkStyle": [
+{
+"zIndex": 0,
+"type": "Line",
+"stroke": "#E5B50B",
+"strokeWidth": 18,
+"strokeLinecap": "butt"
+},
+{
+"zIndex": 1,
+"type": "Line",
+"stroke": "#1F1A00",
+"strokeWidth": 18,
+"strokeLinecap": "butt",
+"strokeDasharray": [
+12,
+10
+]
+},
+{
+"zIndex": 2,
+"type": "Line",
+"stroke": "#F7FABF",
+"strokeWidth": 10
+},
+{
+"zIndex": 3,
+"type": "Text",
+"textRef": "properties.name",
+"fill": "#3D272B"
+}
+]
+},
+"geospace": {
+"id": "gpx-traces-pg",
+"title": "Space 1 - Project 1000001"
+},
+"last_update": "2018-04-25 10:03:00"
+},
+{
+"id": "layer-1000001_2",
+"meta": {
+"title": "Layer 2 - Project 1000001"
+},
+"visible": true,
+"styleGroup": {
+"linkStyle": [
+{
+"zIndex": 0,
+"type": "Line",
+"stroke": "#E5B50B",
+"strokeWidth": 18,
+"strokeLinecap": "butt"
+},
+{
+"zIndex": 1,
+"type": "Line",
+"stroke": "#1F1A00",
+"strokeWidth": 18,
+"strokeLinecap": "butt",
+"strokeDasharray": [
+12,
+10
+]
+},
+{
+"zIndex": 2,
+"type": "Line",
+"stroke": "#F7FABF",
+"strokeWidth": 10
+},
+{
+"zIndex": 3,
+"type": "Text",
+"textRef": "properties.name",
+"fill": "#3D272B"
+}
+]
+},
+"geospace": {
+"id": "observations",
+"title": "Space 2 - Project 1000001"
+},
+"last_update": "2018-04-25 10:03:00"
+},
+{
+"id": "layer-1000001_3",
+"meta": {
+"title": "Layer 3 - Project 1000001"
+},
+"visible": true,
+"styleGroup": {
+"linkStyle": [
+{
+"zIndex": 0,
+"type": "Line",
+"stroke": "#E5B50B",
+"strokeWidth": 18,
+"strokeLinecap": "butt"
+},
+{
+"zIndex": 1,
+"type": "Line",
+"stroke": "#1F1A00",
+"strokeWidth": 18,
+"strokeLinecap": "butt",
+"strokeDasharray": [
+12,
+10
+]
+},
+{
+"zIndex": 2,
+"type": "Line",
+"stroke": "#F7FABF",
+"strokeWidth": 10
+},
+{
+"zIndex": 3,
+"type": "Text",
+"textRef": "properties.name",
+"fill": "#3D272B"
+}
+]
+},
+"geospace": {
+"id": "x-newgeospace-5657",
+"title": "Space 3 - Project 1000001"
+},
+"last_update": "2018-04-25 10:03:00"
+}
+],
+"last_update": "2018-04-25 10:03:00",
+"styleGroupBase": {
+"water": [
+{
+"zIndex": 2,
+"type": "Polygon",
+"fill": "#00ff00"
+}
+],
+"earth": [
+{
+"zIndex": 1,
+"type": "Polygon",
+"fill": "#555555"
+}
+],
+"landuse": [
+{
+"zIndex": 3,
+"type": "Polygon",
+"fill": "#666666"
+}
+],
+"roads": [
+{
+"zIndex": 4,
+"type": "Line",
+"strokeWidth": 4,
+"stroke": "#ff0000"
+}
+],
+"roadshighway": [
+{
+"zIndex": 5,
+"type": "Line",
+"strokeWidth": 6,
+"stroke": "#0000ff"
+}
+],
+"buildings": [
+{
+"zIndex": 7,
+"type": "Polygon",
+"fill": "#999999"
+}
+]
+}
+};
+        
+         $.ajax({
+            url: 'https://xyz.sit.cpdev.aws.in.here.com/project-api/projects',
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                $('#target').html(data.msg);
+            },
+            data: JSON.stringify(bodyObject),
+            headers: {
+                "Authorization":"Bearer vFNPEDqlr7U0uHlP87rFbw"
+            }
+        });
+        
+        
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Send an HTTP POST request to a page and get the result back</button>
+
+</body>
+</html>
