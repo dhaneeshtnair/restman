@@ -12,7 +12,6 @@ import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-import org.springframework.core.io.ClassPathResource;
 
 import com.restman.core.auth.AuthLogin;
 
@@ -42,8 +41,8 @@ public class App
         //webAppContext.setResourceBase();
 
         try {
-			resource_handler.setResourceBase(new ClassPathResource("/www/").getURI().toString());
-		} catch (IOException e1) {
+			resource_handler.setResourceBase(App.class.getClassLoader().getResource("www").toURI().toString());
+		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
@@ -57,7 +56,7 @@ public class App
 		ServletHolder jerseyServlet = context.addServlet(org.glassfish.jersey.servlet.ServletContainer.class, "/*");
 		jerseyServlet.setInitOrder(0);
 
-		jerseyServlet.setInitParameter("jersey.config.server.provider.classnames",RestmanTransformer.class.getCanonicalName()+" "+RestmanTestCaseManager.class.getCanonicalName()+" "+ RestPy.class.getCanonicalName()+" "+CorsFilter.class.getCanonicalName()+" "+AuthLogin.class.getCanonicalName());
+		jerseyServlet.setInitParameter("jersey.config.server.provider.classnames",RestmanTestCaseManager.class.getCanonicalName()+" "+ RestPy.class.getCanonicalName()+" "+CorsFilter.class.getCanonicalName()+" "+AuthLogin.class.getCanonicalName());
 
 		FilterHolder holder = new FilterHolder(new CorsFilter());
 		

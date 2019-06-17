@@ -40,21 +40,11 @@ public class ConfigReader {
 
     private ConfigReader(){
 
-        String appConf = System.getProperty("appConf");
-        if(appConf==null) {
+        String appConf = System.getProperty("appConf","application.properties");
+        if(appConf!=null) {
             try {
                 try (final InputStream inputStream =
-                             ConfigReader.class.getClassLoader().getResourceAsStream("application.properties")) {
-                    properties = new Properties();
-                    properties.load(inputStream);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }else{
-            try {
-                try (final InputStream inputStream =
-                             new FileInputStream(appConf)) {
+                             ConfigReader.class.getClassLoader().getResourceAsStream(appConf)) {
                     properties = new Properties();
                     properties.load(inputStream);
                 }

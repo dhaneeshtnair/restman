@@ -5,7 +5,7 @@
 <link rel="icon" type="image/png" href="assets/img/favicon.ico">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-<title>CMS</title>
+<title>RESTMan Report</title>
 
 <meta
 	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
@@ -34,6 +34,8 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300'
 	rel='stylesheet' type='text/css'>
 <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+<link href="assets/css/theme_black.css" rel="stylesheet" />
+
 </head>
 <body>
 
@@ -46,7 +48,7 @@
 
 			<div class="sidebar-wrapper">
 				<div class="logo">
-					<a href="#" class="simple-text"> Test Report </a>
+					<a href="#" class="simple-text">Test Report </a>
 				</div>
 
 				<ul class="nav">
@@ -155,7 +157,7 @@
 						<div class="col-md-8">
 							<div class="card">
 								<div class="header text-center">
-									<h4 class="title">CMS Test Report</h4>
+									<h4 class="title">Test Report</h4>
 									<p class="category"></p>
 									<br>
 								</div>
@@ -199,8 +201,6 @@
 							<div class="card">
 								<div class="header">
 									<h4 class="title">Test Cases</h4>
-									<!--                                 <p class="category"><a href="http://cms-dev.cme.in.here.com/status">http://cms-dev.cme.in.here.com <span id="devStatus"></span></a></p>
- -->
 								</div>
 								<p id="testCaseCloudURL" style="display: none">/herest/</p>
 
@@ -216,20 +216,6 @@
 											<th>Description</th>
 										</thead>
 										<tbody>
-											<!-- <tr id="dev1">
-                                        	<td>1</td>
-                                        	<td>uchicmsapp01.lnx.in.here.com:8080</td>
-                                        	<td></td>
-                                        	<td></td>
-                                        	<td></td>
-                                        </tr>
-                                        <tr id="dev2">
-                                        	<td>2</td>
-                                        	<td>uchicmsapp02.lnx.in.here.com:8080</td>
-                                        	<td></td>
-                                        	<td></td>
-                                        	<td></td>
-                                        </tr> -->
 
 										</tbody>
 									</table>
@@ -323,7 +309,7 @@
 			
 			var executionId = getUrlVars()["executionId"];
 			
-			var url = $("#testCaseCloudURL").html()+projectName+"/testsummary?executionId="+executionId;
+			var url = $("#testCaseCloudURL").html()+projectName+"_summary/data?executionId="+executionId;
 			
 			var pass=0;
 			var fail=0;

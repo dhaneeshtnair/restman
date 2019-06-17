@@ -4,42 +4,18 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.restman</groupId>
-	<artifactId>testmanager</artifactId>
+	<groupId>com.javaveda</groupId>
+	<artifactId>restgun</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>Maven Quick Start Archetype</name>
+	<name>RestGUN</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<spring.boot.version>1.1.5.RELEASE</spring.boot.version>
 	</properties>
 
 	<dependencies>
-
-		<dependency>
-			<groupId>com.sshtools</groupId>
-			<artifactId>j2ssh-maverick</artifactId>
-			<version>1.5.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.jcraft</groupId>
-			<artifactId>jzlib</artifactId>
-			<version>1.1.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.bouncycastle</groupId>
-			<artifactId>bcprov-jdk15on</artifactId>
-			<version>1.52</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
-		<dependency>
-			<groupId>org.apache.velocity</groupId>
-			<artifactId>velocity</artifactId>
-			<version>1.7</version>
-		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.json/json -->
 		<dependency>
@@ -57,21 +33,17 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 		</dependency>
 
 
-
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-server</artifactId>
 			<version>9.2.3.v20140905</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-servlet</artifactId>
 			<version>9.2.3.v20140905</version>
 		</dependency>
-
-
 
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
@@ -85,9 +57,6 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<artifactId>jersey-client</artifactId>
 			<version>2.23.2</version>
 		</dependency>
-
-
-
 
 
 		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
@@ -108,7 +77,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-webapp</artifactId>
-			<version>9.2.3.v20140905</version>
+			<version>9.3.24.v20180605</version>
 		</dependency>
 
 		<dependency>
@@ -116,43 +85,12 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.6.5</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.python/jython-standalone -->
+		<!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
 		<dependency>
-			<groupId>org.python</groupId>
-			<artifactId>jython-standalone</artifactId>
-			<version>2.5.2</version>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
 		</dependency>
-
-
-
-		<!-- https://mvnrepository.com/artifact/com.microsoft.ews-java-api/ews-java-api -->
-		<dependency>
-			<groupId>com.microsoft.ews-java-api</groupId>
-			<artifactId>ews-java-api</artifactId>
-			<version>2.0</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.bazaarvoice.jolt/jolt-core -->
-		<dependency>
-			<groupId>com.bazaarvoice.jolt</groupId>
-			<artifactId>jolt-core</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.bazaarvoice.jolt</groupId>
-			<artifactId>json-utils</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-core</artifactId>
-    <version>5.0.1.RELEASE</version>
-</dependency>
-
-
 	</dependencies>
 
 	<build>
@@ -212,8 +150,4 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 		</plugins>
 	</build>
-
-
-
-
 </project> 
