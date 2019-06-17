@@ -57,19 +57,11 @@ public class MultiStepParser {
 					String nextStepId = testCase.getOnSuccess().toString();
 					testCase.getTestCaseResult().setNextStep(nextStepId);
 					nextStep = stepMap.get(nextStepId);
-					System.out.println(
-							testCase.getTestCaseResult().getTestCaseId() + " succesful, now executing " + nextStep);
-					System.out.println(
-							"#################################################################################");
 					finalStatus = (finalStatus && true);
 					context.get("step"+testCase.getIndex()).getAsJsonObject().add("result",new Gson().toJsonTree(testCase.getTestCaseResult()));
 				} else if (testCase.getTestCaseResult().getStatus() == Status.FAILURE) {
 					String nextStepId = testCase.getOnFailure().toString();
 					testCase.getTestCaseResult().setNextStep(nextStepId);
-					System.out.println(
-							testCase.getTestCaseResult().getTestCaseId() + " failed, now executing " + nextStep);
-					System.out.println(
-							"#################################################################################");
 					nextStep = stepMap.get(nextStepId);
 					finalStatus = (finalStatus && false);
 				}

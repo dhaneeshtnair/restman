@@ -33,16 +33,19 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 		</dependency>
 
 
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-server</artifactId>
-			<version>9.2.28.v20190418</version>
+			<version>9.4.19.v20190610</version>
 		</dependency>
+
+
 
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-servlet</artifactId>
-			<version>9.2.28.v20190418</version>
+			<version>9.4.19.v20190610</version>
 		</dependency>
 
 		<dependency>

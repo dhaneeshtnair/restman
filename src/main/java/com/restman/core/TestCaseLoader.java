@@ -23,35 +23,6 @@ public class TestCaseLoader
 	private static Map<String, List<String>> tagMap = new ConcurrentHashMap<>(); 
 	private JsonParser parser = new JsonParser();
 
-	public TestCaseLoader()
-	{
-		loadAllTests();
-	}
-	public void loadAllTests()
-	{
-//		File files[] = new File("src/main/resources/testcase").listFiles();
-//
-//		Arrays.asList(files).parallelStream().forEach(x->{
-//			String jsonFileString = toString(x);
-//			JsonObject jsonObject = parser.parse(jsonFileString).getAsJsonObject();
-//			testCaseIdMap.put( jsonObject.get("id").getAsString(), x.getPath() );
-//			JsonArray jsonArray = jsonObject.get("tags").getAsJsonArray();
-//			for(int i=0;i<jsonArray.size();i++)
-//			{
-//				List<String> tests = tagMap.get(jsonArray.get(i).getAsString());
-//				if(tests == null)
-//				{
-//					tests = new ArrayList<>();
-//					tests.add(x.getPath());
-//				}
-//				tagMap.put(jsonArray.get(i).getAsString(), tests);
-//			}
-//		});
-	}
-//	public static void main(String[] args)
-//	{
-//		TestCaseLoader testCaseLoader =new TestCaseLoader();
-//	}
 
 	public static String toString(File f)
 	{

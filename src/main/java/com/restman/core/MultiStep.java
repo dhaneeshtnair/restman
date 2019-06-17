@@ -36,15 +36,15 @@ public class MultiStep
 			{
 				nextStep = testCase.getOnSuccess().toString();
 				testCase.getTestCaseResult().setNextStep(nextStep);
-				System.out.println(testCase.getTestCaseResult().getTestCaseId()+" succesful, now executing "+nextStep);
-				System.out.println("#################################################################################");
+				//System.out.println(testCase.getTestCaseResult().getTestCaseId()+" succesful, now executing "+nextStep);
+				//System.out.println("#################################################################################");
 			}
 			else if(testCase.getTestCaseResult().getStatus()== TestCaseResult.Status.FAILURE)
 			{
 				nextStep = testCase.getOnFailure().toString();
 				testCase.getTestCaseResult().setNextStep(nextStep);
-				System.out.println(testCase.getTestCaseResult().getTestCaseId()+" failed, now executing "+nextStep);
-				System.out.println("#################################################################################");
+				//System.out.println(testCase.getTestCaseResult().getTestCaseId()+" failed, now executing "+nextStep);
+				//System.out.println("#################################################################################");
 			}
 		}
 		for(String key: testCaseResults.keySet())
