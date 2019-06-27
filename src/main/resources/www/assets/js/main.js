@@ -902,7 +902,7 @@ function initProjectTree() {
 				groupsMap[group] = gp;
 			}
 			gp.push({
-				"id" : rec.id,
+				"id" : group+":"+rec.id,
 				"text" : rec.name,
 				"icon" : "assets/images/eye.png",
 				"state" : {
@@ -1026,7 +1026,7 @@ function initTreeEvents() {
 						}
 
 						var ur = server+"/herest/" + projectName
-								+ "/testCase/" + data.node.id;
+								+ "/testCase/" + data.node.id.split(":")[1];
 
 						$
 								.getJSON(
