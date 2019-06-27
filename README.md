@@ -26,6 +26,7 @@ RestGun uses ElasticSearch as the backend datastorage mechanism. By default the 
 Make sure ElasticSearch with the provided configuration is Up and Running before moving to RestGun.
 
     git clone https://github.com/dhaneeshtnair/restgun.git
+    cd restgun
     mvn clean install
     java -jar target/restgun-1.0.jar
     Server will start on htttp://localhost:44444
