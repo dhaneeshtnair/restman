@@ -21,6 +21,10 @@ To get started using RestGun, you just need a very basic understanding of java,j
 - www = UI HTML and Javascript files
 - src = source java files
 
+## Prerequisites
+- Docker is installed
+- Docker-Compose is installed
+
 ## Installation
 RestGun uses ElasticSearch as the backend datastorage mechanism. By default the configuration in application.properties under src/resources folder is : es.url=http://localhost:9200/
 Make sure ElasticSearch with the provided configuration is Up and Running before moving to RestGun.
@@ -28,7 +32,7 @@ Make sure ElasticSearch with the provided configuration is Up and Running before
     git clone https://github.com/dhaneeshtnair/restgun.git
     cd restgun
     mvn clean install
-    java -jar target/restgun-1.0.jar
+    docker-compose up
     Server will start on htttp://localhost:44444
 Start creating assertions by clicking on UI
 #### Use Maven Central Repository
